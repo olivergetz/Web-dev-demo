@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Oliver Getz</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="script.js"></script>
+	</head>
+
+	<header>
+		<div class="floatingElement">
+			<aside>
+				<h1 id="pageHeader" onclick="btnResponse('pageHeader', 2)">Oliver Getz</h1>
+			</aside>
+		</div>
+		<div class="movingBG"> <!TODO: Creates a gap without font-size 0px. Is there a better way to implement this?>
+			<video muted width="100%" height="100%" autoplay="true" loop="true">
+				<source src="video-reel.mp4" type="video/mp4">
+			</video>
+		</div>
+	</header>
+
+	<nav>
+		<a href="">News</a>
+		<a href="">About</a>
+		<a href="">Music</a>
+		<a href="">Resources</a>
+		<a href="">Contact</a>
+	</nav>
+
+	<body>
+    <div class="content">
+    	<section class="soundCloud">
+    		<div id="SlideFG">
+     			<h2>FREE SAMPLES</h2>
+     			<p id="SlideText">These are some audio samples from projects I've worked on in the past. I hope you enjoy my work.<br><br>This moving panel is a div with an id, because a class would return the parent and its children as an array when using 'document.getElementByClassName', which may or may not be ideal. I chose to use id's for this, but I could also have used document.getElementByClassName()[0] to access the first html element through a class. I'm not sure if there are pros or cons for either in this scenario yet.</p>
+    		</div><iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/309180998&color=%2391d7d5&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+    	</section>
+    	<script>
+		    var sliderElement = document.getElementById("SlideFG");
+		    sliderElement.addEventListener("mouseover", mouseOver);
+    	</script>
+    	<section class="text">
+    		<h2>Description</h2>
+    		<p>Hi, and thank you for checking out my demo website. This is my "sandbox", so to speak, where I experiment with HTML/CSS to figure out how it all works together and get a sense of what kind of problems one might encounter when doing web development. Here are a few things I've learned recently:</p>
+    		<ul>
+    			<li><strong>Inline-blocks</strong> take HTML white spaces into account. Unless removed, these spaces will create gaps between elements.</li>
+    			<li><strong>Tags</strong> very much matter to search engines, i.e. good HTML is vital for <em>Search Engine Optimization</em>. Good practice is to understand what kind of content is in a block and use the appropriate tags. Proper tags also make it easier to target the necessary elements of a page in CSS without accidendally changing the style of wrong elements.</li>
+    			<li><strong>@media</strong> in CSS is great for responsive design! We wouldn't want this website to break when adjusting the window size, now would we?</li>
+    			<li><strong>Classes</strong> allow styling of multiple elements. How effective!</li>
+    			<li><strong>PHP</strong> outputs HTML/CSS/JavaScript based on code written by the developer and can grab info from a database like MySQL. Once the PHP code is processed, it is sent back to Apache then to the browser of the user as HTML/CSS/JavaScript. The PHP signal flow looks something like: Browser->Apache->PHP->MySQL->Apache->Browser.</li>
+    		</ul>
+    		<p>Thank you again for checking out my site. If you have tips on how to improve it you may reach me at olivergetz@gmail.com!</p>
+    	</section>
+    </div>
+	</body>
+
+	<footer>
+		<div class="row">
+		  <div class="column"> 
+		  	<h3>Contact:</h3>
+		  	<p>
+		  		olivergetz@gmail.com<br>
+		  		+47 922 16 223
+		  	</p>
+		  </div>
+		  <div class="column">
+		  	<h3>Social Media:</h3>
+		  	<a href="https://www.facebook.com/OliverGetz" target="_blank" class="fa fa-facebook"></a><br>
+		  	<a href="https://www.twitter.com/sjatrik" target="_blank" class="fa fa-twitter"></a>
+		  </div>
+		  <div class="column">
+		  	<h3>Resources:</h3>
+		  </div>
+		</div>
+	</footer>
+
+</html>
